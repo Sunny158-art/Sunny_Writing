@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>读书笔记</title>
+  </head>
+  <body>
+    <header>
+    <p style="text-align: center;">专业：计算机科学与技术 ｜姓名：孙艺璇，学号：202311680182</p>
+    <hr> 
+      <h1 style="text-align: center;">Git核心概念</h1>
+      <h2>1.仓库（Repository）</h2>    
+      <h3>本地仓库：项目根目录下的.git文件夹，存储所有版本信息。<br>
+      远程仓库：托管在GitHub/Gitee等平台的云端仓库，用于备份和共享。</h3>
+      <h2>2. 提交（Commit）</h2>
+      <h3>一次提交代表一次完整的版本更新，包含修改说明、时间、作者等信息。
+      <br>重要原则：提交前需经过测试，确保代码可运行。</h3>
+      <h2>3. 分支（Branch）</h2>
+      <h3>默认分支为master或main，可创建新分支开发新功能，避免污染主分支。<br>
+        比喻：分支就像平行宇宙，互不干扰，最终可合并。</h3>
+      <h2>4. 暂存区（Staging Area）</h2>
+      <h3>提交前的“缓冲区”，选择需要纳入版本管理的文件。<br>
+        用途：避免一次性提交所有改动，灵活控制版本内容。</h3>
+        <hr>
+     <h1 style="text-align: center;">Git基础操作</h1>
+     <h2>1. 初始化仓库</h2>
+     <p>bash<br>git init  # 将当前目录变为Git仓库</p>
+     <h2>2.查看状态</h2>
+     <p>bash<br>git status  # 显示未跟踪/已修改的文件</p>
+     <h2>3. 添加文件到暂存区</h2>
+     <p>bash<br>git add file  # 添加单个文件<br>
+        git add .       # 添加所有改动</p>
+     <h2>4. 提交版本</h2>
+     <p>bash<br>git commit -m "提交说明"  # -m后跟简明的描述</p>
+     <h2>5. 查看提交历史</h2>
+     <p>bash<br>git log          # 显示完整提交记录<br>
+        git log --oneline  # 简化版历史</p>
+        <hr>
+     <h1 style="text-align: center;">分支管理</h1>
+     <h2>1. 创建与切换分支</h2>
+     <p>bash<br>git branch dev      # 创建dev分支<br>
+        git checkout dev    # 切换到dev分支<br>
+        git checkout -b dev # 创建并切换（合并上述两步）</p>
+     <h2>2. 合并分支</h2>
+     <p>bash<br>git checkout main   # 切换回主分支<br>
+        git merge dev       # 将dev分支合并到main
+        </p>
+     <h2>3. 解决冲突</h2>
+     <h3>当多个分支修改同一文件时需手动处理冲突，Git会用<<<<<<<标记冲突位置。</h3>
+     <hr>
+     <h1 style="text-align: center;">远程仓库操作</h1>
+     <h2>1. 关联远程仓库</h2>
+     <p>bash<br>git remote add origin 远程仓库URL</p>
+     <h2>2. 推送本地代码</h2>
+     <p>bash<br>git push -u origin main  # 首次推送需加 -u<br>
+        git push                 # 后续推送简化</p>
+     <h2>3. 拉取远程更新</h2>
+     <p>bash<br>git pull  # 相当于 git fetch + git merge</p>
+     <hr>
+     <h1 style="text-align: center;">常见问题与小技巧</h1>
+     <h2>1. 撤销操作</h2>
+     <h3>撤销未提交的修改：</h3><p>git checkout -- file</p>
+     <h3>撤回暂存区文件：<file></h3><p>git reset HEAD </p>
+     <h3>修改最后一次提交:<file></h3><p>git commit --amend</p>
+     <h2>2. 忽略文件</h2>
+     <h3>创建.gitignore文件，列出需忽略的文件/文件夹（如node_modules/, .DS_Store）。</h3>
+     <h2>克隆现有项目</h2>
+     <p>bash<br>git clone <仓库URL>  # 下载远程仓库到本地</p>
+     <hr>
+     <h1 style="text-align: center;">未完待续······</h1>
+  </body>
+</html>
